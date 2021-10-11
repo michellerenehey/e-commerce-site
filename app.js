@@ -1,8 +1,20 @@
-// import functions and grab DOM elements
+// import functions
+import { cookbooks } from './cookbooks.js'; 
 
-// initialize global state
+// grab important DOM elements
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const productList = document.getElementById('product-list'); 
+
+// create looping element
+for(let book in cookbooks) {
+  const productCard = document.createElement('div'); 
+  productCard.classList.add('product-list'); 
+
+  const productHeader = document.createElement('h3'); 
+  productHeader.textContent = cookbooks.name; 
+
+  const productImg = document.createElement('img'); 
+  productImg.src = cookbooks.img; 
+  console.log(productImg);
+  
+}
