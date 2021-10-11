@@ -13,18 +13,22 @@ const productList = document.getElementById('product-list');
 // </div> */}
 
 // create looping element
-for(let book in cookbooks) {
+for(let book of cookbooks) {
   const productCard = document.createElement('div'); 
   productCard.classList.add('product-card'); 
-
+  
   const productHeader = document.createElement('h3'); 
-  productHeader.textContent = cookbooks.name; 
+  productHeader.textContent = book.name; 
 
   const productImg = document.createElement('img'); 
-  productImg.src = cookbooks.img; 
-  console.log(productImg);
+  productImg.src = book.img; 
 
-  // add publisher into p tag
-  // add price into p tag
+  const publisherName = document.createElement('p'); 
+  publisherName.textContent = book.publisher; 
   
+  const price = document.createElement('p'); 
+  price.textContent = book.price; 
+
+  productCard.append(productHeader, productImg, publisherName, price); 
+  productList.appendChild(productCard);
 };
