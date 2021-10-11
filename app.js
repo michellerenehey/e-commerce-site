@@ -1,11 +1,11 @@
 // import functions
 import { cookbooks } from './cookbooks.js'; 
-import { render-book } from './render-book.js';
+import { renderBook } from './render-book.js';
 
 // grab important DOM elements
-
 const productList = document.getElementById('product-list'); 
 
+// model HTML skeleton: 
 // <div class="product-card">
 //   <h3>Baking With Fortitutde</h3>
 //   <img src="./assets/fortitude.jpeg">
@@ -15,6 +15,6 @@ const productList = document.getElementById('product-list');
 
 // create looping element
 for(let book of cookbooks) {
-
+  const productCard = renderBook(book);
   productList.appendChild(productCard);
 };
