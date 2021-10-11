@@ -3,6 +3,7 @@
 //     id: '1', 
 //     name: 'Baking with Fortitude', 
 //     img: './assets/fortitude.jpeg', 
+//     author: 'Dee Rettali', 
 //     publisher: 'Bloomsbury', 
 //     price: 28.00, 
 // }, 
