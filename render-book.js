@@ -19,14 +19,21 @@ export function renderBook(book) {
     productImg.src = book.img; 
 
     const authorName = document.createElement('p'); 
-    authorName.textContent = book.author; 
+    authorName.classList.add('author'); 
+    authorName.textContent = 'Author: ' + book.author; 
   
     const publisherName = document.createElement('p'); 
-    publisherName.textContent = book.publisher; 
+    publisherName.classList.add('publisher'); 
+    publisherName.textContent = 'Publisher: ' + book.publisher; 
     
     const price = document.createElement('p'); 
-    price.textContent = book.price; 
-  
-    productCard.append(productHeader, productImg, authorName, publisherName, price);   
+    price.classList.add('price'); 
+    price.textContent = `Price: $${Number(book.price)}`; 
+
+    const addButton = document.createElement('button'); 
+    addButton.classList.add('add-button'); 
+    addButton.textContent = 'Add to cart'; 
+
+    productCard.append(productHeader, productImg, authorName, publisherName, price, addButton);   
     return productCard; 
-}
+}; 

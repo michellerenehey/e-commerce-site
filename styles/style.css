@@ -1,20 +1,55 @@
 body {
     background-color: white;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 75px;
+    color: #0409a6;
 }
 
 #product-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .product-card {
     border: 1px solid black; 
     margin: 5px;
+    display: flex;
+    flex-direction: column; 
     align-items: center;
-}
-.product-card img {
-    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+    width: 300px;
+
 }
 
+h3 {
+    font-weight: bold;
+    font-size:x-large;
+    justify-self: flex-start;
+}
+
+.product-card img {
+    width: 75%;
+}
+
+.author {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.publisher {
+    margin: 5px;
+    font-style: oblique;
+    font-size: smaller;
+}
+
+.price {
+    margin: 5px;
+}
