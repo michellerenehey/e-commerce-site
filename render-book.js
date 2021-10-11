@@ -16,6 +16,9 @@ export function renderBook(book) {
   
     const productImg = document.createElement('img'); 
     productImg.src = book.img; 
+
+    const authorName = document.createElement('p'); 
+    authorName.textContent = book.author; 
   
     const publisherName = document.createElement('p'); 
     publisherName.textContent = book.publisher; 
@@ -23,6 +26,6 @@ export function renderBook(book) {
     const price = document.createElement('p'); 
     price.textContent = book.price; 
   
-    productCard.append(productHeader, productImg, publisherName, price);   
+    productCard.append(productHeader, productImg, authorName, publisherName, price);   
     return productCard; 
 }

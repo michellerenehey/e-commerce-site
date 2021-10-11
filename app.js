@@ -9,6 +9,7 @@ const productList = document.getElementById('product-list');
 // <div class="product-card">
 //   <h3>Baking With Fortitutde</h3>
 //   <img src="./assets/fortitude.jpeg">
+//   <p>Dee Rettali</p>
 //   <p>Bloomsbury</p>
 //   <p>28.00</p>
 // </div> */}
