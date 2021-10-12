@@ -4,6 +4,7 @@ import { renderBook } from '../render-book.js';
 import { findById } from '../utils.js';
 import { calcOrderTotal } from '../utils.js';
 import { cart } from '../data/cart-data.js';    
+import { renderLineItem } from '../render-line-item.js';
 
 const test = QUnit.test;
 
@@ -43,4 +44,12 @@ test('total should return the total of the items in the cart', (expect) => {
 
     const actual = calcOrderTotal(cart, cookbooks); 
     expect.equal(actual, expected);
+}); 
+
+test('renderLineItem should return html snippet', (expect) => {
+
+    const expected = '<tr><td>Baking with Fortitude</td><td>28</td><td>1</td><td>$28.00</td></tr>';
+    
+    const actual = renderLineItem(cart[0], findById('1', cookbooks)).outerHTML; 
+    expect.equal(actual, expected); 
 }); 
