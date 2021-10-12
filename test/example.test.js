@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { cookbooks } from '../cookbooks.js';
+import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
 
 

@@ -1,5 +1,5 @@
 // import functions
-import { cookbooks } from './cookbooks.js'; 
+import { cookbooks } from '../data/cookbooks.js'; 
 import { renderBook } from './render-book.js';
 
 // grab important DOM elements

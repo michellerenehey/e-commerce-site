@@ -7,8 +7,13 @@ table {
     flex-direction: column;
     align-items: center;
     margin: 30px; 
+    border: 2px solid #0409a6;
 }
 
-table body {
-    margin: 50px;
+thead {
+    color: white;
+    background-color: #0409a6;
+}
+table th, table td {
+    padding: 15px;
 }
