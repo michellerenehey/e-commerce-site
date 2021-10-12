@@ -2,6 +2,8 @@
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
 import { findById } from '../utils.js';
+import { calcOrderTotal } from '../utils.js';
+import { cart } from '../data/cart-data.js';    
 
 const test = QUnit.test;
 
@@ -34,3 +36,11 @@ test('find id should return the item/product matching the id', (expect) => {
     const actual = findById('1', cookbooks); 
     expect.deepEqual(actual, expected);
 });
+
+test('total should return the total of the items in the cart', (expect) => {
+
+    const expected = 98; 
+
+    const actual = calcOrderTotal(cart, cookbooks); 
+    expect.equal(actual, expected);
+}); 
