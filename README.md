@@ -2,19 +2,40 @@
 
 ## Making a plan
 
-(bolded steps are mandatory, unbolded are for more advanced projects)
+### HTML
+* h1: welcome
+* h2: little description
+* div: empty, with id="product-list"
+### CSS
+* center the page
+* put the images in a flexbox, and have them wrap
+### IMAGES
+* add images into assets folder to use in list
+### DATA MODEL (cookbooks.js)
+* create an ARRAY, and inside of that array, build objects
+* what do I want people to know about my products? 
+* cookbooks! here is what is important to me: 
+    * id
+    * name
+    * image
+    * publisher
+    <!-- * type of cuisine -->
+    * price 
+### APP.JS
+* here we will want to grab the dom elements that exist that we'll need: just the empty div
+* build out the initial for-loop here (we'll move it later, but it might help to understand how it works!)
+* we need to: 
+    * create a div to hold each item
+    * update a header in the div to include the name from our cookbooks list (h3)
+    * update a image in the div to be the image from our cookbooks list (img)
+    * update a p tag in the div to hold the publisher from our cookbooks list (p)
+    * update a p tag in the div to hold the price from our cookbooks list (p)
 
-1) **Make a drawing of your app. Simple "wireframes"**
-2) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-3) **For each HTML element ask: Why do I need this?**
-4) Ask which of out HTML elements are hard coded, and which are dynamically generated?
-5) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-6) Is there some state we need to initialize?
-7) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-8) **Think about how to validate each of your steps**
-9) Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
-10) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
-11) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+### CREATE FUNCTION (render-product.js)
+* now, instead of all of the DOM maniuplation happening in app.js, let's create it's own function to render all of the values from the list. we'll do that in a separate file, render-product.js.
+* function will take in one of the items in the product-list array
+* function will output the for-loop (dom manipulation), to create the html 
+* don't forget to export! then don't forget to import in app.js! 
 
 
 ## To Run Cypress Tests

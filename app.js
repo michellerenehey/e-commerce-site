@@ -1,8 +1,21 @@
-// import functions and grab DOM elements
+// import functions
+import { cookbooks } from './cookbooks.js'; 
+import { renderBook } from './render-book.js';
 
-// initialize global state
+// grab important DOM elements
+const productList = document.getElementById('product-list'); 
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+// model HTML skeleton: 
+// <div class="product-card">
+//   <h3>Baking With Fortitutde</h3>
+//   <img src="./assets/fortitude.jpeg">
+//   <p>Dee Rettali</p>
+//   <p>Bloomsbury</p>
+//   <p>28.00</p>
+// </div> */}
+
+// create looping element
+for (let book of cookbooks) {
+    const productCard = renderBook(book);
+    productList.appendChild(productCard);
+}

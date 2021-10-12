@@ -1,0 +1,42 @@
+export const cookbooks = [
+    {
+        id: '1', 
+        name: 'Baking with Fortitude', 
+        img: './assets/fortitude.jpeg', 
+        author: 'Dee Rettali',
+        publisher: 'Bloomsbury', 
+        price: 28.00, 
+    }, 
+    {
+        id: '2', 
+        name: 'Jubilee', 
+        img: './assets/jubilee.jpeg',
+        author: 'Toni-Tipton Martin', 
+        publisher: 'Clarkson Potter', 
+        price: 35.00, 
+    }, 
+    {
+        id: '3', 
+        name: 'How to Taste',
+        img: './assets/taste.jpeg',
+        author: 'Becky Selengut',
+        publisher: 'Sasquatch', 
+        price: 22.95, 
+    }, 
+    {
+        id: '4', 
+        name: 'Nordic Family Kitchen',
+        img: './assets/nordic.jpeg',
+        author: 'Mikkel Karstad', 
+        publisher: 'Prestel', 
+        price: 35.00, 
+    }, 
+    {
+        id: '5', 
+        name: 'The Wok',
+        img: './assets/wok.jpeg',
+        author: 'J. Kenji Lopez-Alt', 
+        publisher: 'W.W. Norton', 
+        price: 50.00, 
+    }, 
+];
