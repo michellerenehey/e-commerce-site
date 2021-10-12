@@ -24,11 +24,11 @@ for (let cartItem of cart) {
     const tdName = document.createElement('td'); 
     tdName.textContent = bookData.name; 
     const tdPrice = document.createElement('td'); 
-    tdPrice.textContent = bookData.price;
+    tdPrice.textContent = `$${bookData.price}`;
     const tdQty = document.createElement('td'); 
     tdQty.textContent = cartItem.qty; 
     const tdTotal = document.createElement('td'); 
-    tdTotal.textContent = cartItem.qty * bookData.price; 
+    tdTotal.textContent = `$${cartItem.qty * bookData.price}`; 
 
     tr.append(tdName, tdPrice, tdQty, tdTotal); 
     tbody.append(tr);
