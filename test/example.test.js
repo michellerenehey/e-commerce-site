@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-
+import { findById } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -18,4 +18,19 @@ test('renderBook should return an HTML snippet', (expect) => {
 
     //Expect
     expect.equal(actual, expected);
+});
+
+test('find id should return the item/product matching the id', (expect) => {
+
+    const expected = {    
+        id: '1', 
+        name: 'Baking with Fortitude', 
+        img: './assets/fortitude.jpeg', 
+        author: 'Dee Rettali',
+        publisher: 'Bloomsbury', 
+        price: 28.00, };
+
+
+    const actual = findById('1', cookbooks); 
+    expect.deepEqual(actual, expected);
 });
