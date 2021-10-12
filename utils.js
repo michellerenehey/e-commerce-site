@@ -10,3 +10,17 @@ export function findById(id, itemList){
         }
     }
 }
+
+export function calcOrderTotal(cart, itemList) {
+    let orderTotal = 0;
+    for (let item of cart) {
+        const book = findById(item.id, itemList);
+        orderTotal = orderTotal + book.price * item.qty; 
+    }
+
+    return orderTotal;
+}
+
+export function toUSD(number) {
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' }); 
+}

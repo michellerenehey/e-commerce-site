@@ -5,7 +5,7 @@ export const cookbooks = [
         img: './assets/fortitude.jpeg', 
         author: 'Dee Rettali',
         publisher: 'Bloomsbury', 
-        price: 28.00, 
+        price: 28, 
     }, 
     {
         id: '2', 
@@ -13,7 +13,7 @@ export const cookbooks = [
         img: './assets/jubilee.jpeg',
         author: 'Toni-Tipton Martin', 
         publisher: 'Clarkson Potter', 
-        price: 35.00, 
+        price: 35, 
     }, 
     {
         id: '3', 
