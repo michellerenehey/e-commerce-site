@@ -8,6 +8,7 @@ import { renderLineItem } from '../render-line-item.js';
 
 const test = QUnit.test;
 
+// TEST 1: RENDERBOOK
 test('renderBook should return an HTML snippet', (expect) => {
   
     // grab outerHTML from first object 
@@ -23,6 +24,7 @@ test('renderBook should return an HTML snippet', (expect) => {
     expect.equal(actual, expected);
 });
 
+// TEST 2: FINDBYID
 test('find id should return the item/product matching the id', (expect) => {
 
     const expected = {    
@@ -38,6 +40,7 @@ test('find id should return the item/product matching the id', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
+// TEST 3: CALCORDERTOTAL
 test('total should return the total of the items in the cart', (expect) => {
 
     const expected = 98; 
@@ -46,6 +49,7 @@ test('total should return the total of the items in the cart', (expect) => {
     expect.equal(actual, expected);
 }); 
 
+// TEST 4: RENDERLINEITEM
 test('renderLineItem should return html snippet', (expect) => {
 
     const expected = '<tr><td>Baking with Fortitude</td><td>28</td><td>1</td><td>$28.00</td></tr>';
