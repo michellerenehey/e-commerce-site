@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
 }
@@ -5,7 +9,8 @@ h1 {
 table {
     margin: 30px; 
     border: 2px solid #0409a6;
-
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 thead {
@@ -25,4 +30,8 @@ button {
     text-transform: uppercase;
     margin: 10px;
     padding: 10px;    
+}
+
+a {
+    color: #0409a6;
 }
