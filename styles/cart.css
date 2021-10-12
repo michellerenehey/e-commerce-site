@@ -1,0 +1,14 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px; 
+}
+
+table body {
+    margin: 50px;
+}
