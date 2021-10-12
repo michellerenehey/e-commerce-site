@@ -36,4 +36,4 @@ export function renderBook(book) {
 
     productCard.append(productHeader, productImg, authorName, publisherName, price, addButton);   
     return productCard; 
-}; 
+}

@@ -15,7 +15,7 @@ const productList = document.getElementById('product-list');
 // </div> */}
 
 // create looping element
-for(let book of cookbooks) {
-  const productCard = renderBook(book);
-  productList.appendChild(productCard);
-};
+for (let book of cookbooks) {
+    const productCard = renderBook(book);
+    productList.appendChild(productCard);
+}

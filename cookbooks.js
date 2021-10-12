@@ -39,4 +39,4 @@ export const cookbooks = [
         publisher: 'W.W. Norton', 
         price: 50.00, 
     }, 
-]
+];
