@@ -1,10 +1,14 @@
 // IMPORT MODULES under test here:
-import { cookbooks } from '../cookbooks.js';
+import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-
+import { findById } from '../utils.js';
+import { calcOrderTotal } from '../utils.js';
+import { cart } from '../data/cart-data.js';    
+import { renderLineItem } from '../render-line-item.js';
 
 const test = QUnit.test;
 
+// TEST 1: RENDERBOOK
 test('renderBook should return an HTML snippet', (expect) => {
   
     // grab outerHTML from first object 
@@ -19,3 +23,37 @@ test('renderBook should return an HTML snippet', (expect) => {
     //Expect
     expect.equal(actual, expected);
 });
+
+// TEST 2: FINDBYID
+test('find id should return the item/product matching the id', (expect) => {
+
+    const expected = {    
+        id: '1', 
+        name: 'Baking with Fortitude', 
+        img: './assets/fortitude.jpeg', 
+        author: 'Dee Rettali',
+        publisher: 'Bloomsbury', 
+        price: 28.00, };
+
+
+    const actual = findById('1', cookbooks); 
+    expect.deepEqual(actual, expected);
+});
+
+// TEST 3: CALCORDERTOTAL
+test('total should return the total of the items in the cart', (expect) => {
+
+    const expected = 98; 
+
+    const actual = calcOrderTotal(cart, cookbooks); 
+    expect.equal(actual, expected);
+}); 
+
+// TEST 4: RENDERLINEITEM
+test('renderLineItem should return html snippet', (expect) => {
+
+    const expected = '<tr><td>Baking with Fortitude</td><td>28</td><td>1</td><td>$28.00</td></tr>';
+    
+    const actual = renderLineItem(cart[0], findById('1', cookbooks)).outerHTML; 
+    expect.equal(actual, expected); 
+}); 
