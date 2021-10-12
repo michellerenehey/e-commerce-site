@@ -42,8 +42,8 @@ h3 {
 
 .product-card img {
     height: 270px;
-    object-fit: cover;
-    width: 75%;
+    object-fit: cover; 
+    width: 90%;
 }
 
 .author {
