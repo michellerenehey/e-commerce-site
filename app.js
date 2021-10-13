@@ -24,9 +24,7 @@ for (let book of cookbooks) {
 const addButtons = document.querySelectorAll('.add-button'); 
 
 for (let addBtn of addButtons) {
-    console.log('hello');
     addBtn.addEventListener('click', () => {
         addItem(addBtn.id); 
-        console.log('hi');
     }); 
 }

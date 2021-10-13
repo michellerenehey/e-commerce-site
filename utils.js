@@ -48,3 +48,7 @@ export function addItem(id) {
 }
 
 // create clearCart() function 
+
+export function clearCart() {
+    localStorage.removeItem('CART'); 
+}
