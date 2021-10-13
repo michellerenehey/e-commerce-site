@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-import { calcOrderTotal, findById, getCart, addItem } from '../utils.js';
+import { calcOrderTotal, findById, getCart, addItem, clearCart } from '../utils.js';
 import staticCart from '../data/cart-data.js';    
 import { renderLineItem } from '../render-line-item.js';
 
@@ -11,7 +11,7 @@ const test = QUnit.test;
 test('renderBook should return an HTML snippet', (expect) => {
   
     // grab outerHTML from first object 
-    const expected = '<div class="product-card"><h3>Baking with Fortitude</h3><img src="./assets/fortitude.jpeg"><p class="author">Author: Dee Rettali</p><p class="publisher">Publisher: Bloomsbury</p><p class="price">Price: $28</p><button class=\"add-button\" id=\"1\">Add to cart</button></div>';
+    const expected = '<div class="product-card"><h3>Baking with Fortitude</h3><img src="./assets/fortitude.jpeg"><p class="author">Author: Dee Rettali</p><p class="publisher">Publisher: Bloomsbury</p><p class="price">Price: $28</p><button class=\"add-button\" id=\"1\">Add to cart</button><p class=\"quantity-in-cart\">0</p></div>';
     
     // declare variable to grab first item from object
     const fortitude = cookbooks[0]; 
@@ -117,6 +117,24 @@ test('addItem() should add 1 to qty when item does not already exist in cart', (
     addItem('1'); 
     const cart = getCart(); 
 
-    //asert
+    //assert
     expect.deepEqual(cart, expected); 
+}); 
+
+// Test 8: CLEARCART() 
+test('clearCart() should clear the localStorage', (expect) => {
+    //arrange
+    const expected = [
+        { id: '1', qty: 1 },
+        { id: '2', qty: 2 },
+    ]; 
+    localStorage.setItem('CART', JSON.stringify(expected)); 
+    
+    //act
+    clearCart(); 
+    const cart = getCart(); 
+    const actual = []; 
+    
+    //assert
+    expect.deepEqual(cart, actual); 
 }); 
