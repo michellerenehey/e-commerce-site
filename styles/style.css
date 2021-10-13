@@ -76,6 +76,12 @@ h3 {
     cursor: pointer;
 }
 
+.add-button:active {
+    background-color: #0409a6;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
 #cart-button{
     background-color: #0409a6;
     margin: 35px;

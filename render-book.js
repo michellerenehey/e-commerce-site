@@ -35,6 +35,10 @@ export function renderBook(book) {
     addButton.id = book.id;
     addButton.textContent = 'Add to cart'; 
 
-    productCard.append(productHeader, productImg, authorName, publisherName, price, addButton);   
+    const qtyAdded = document.createElement('p'); 
+    qtyAdded.classList.add('quantity-in-cart'); 
+    qtyAdded.textContent = '0'; 
+
+    productCard.append(productHeader, productImg, authorName, publisherName, price, addButton, qtyAdded);   
     return productCard; 
 }

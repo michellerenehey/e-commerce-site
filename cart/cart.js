@@ -39,3 +39,4 @@ orderButton.addEventListener('click', () => {
     clearCart(); 
     window.location.replace('..'); 
 }); 
+
