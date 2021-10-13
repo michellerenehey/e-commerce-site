@@ -35,6 +35,7 @@ tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderButton = document.getElementById('order-button'); 
 orderButton.addEventListener('click', () => {
+    alert('Are you sure? No refunds!');
     clearCart(); 
     window.location.replace('..'); 
 }); 
