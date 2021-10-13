@@ -44,7 +44,7 @@
 ### DAY 3
 ## FUNCTIONS
 * getcart()
-    * test this first
+    * test this first, bc additem depends on it
         * first test when cart exists
         * second test when cart doesn't exist
     * then add to cart.js

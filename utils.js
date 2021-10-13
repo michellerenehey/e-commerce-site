@@ -15,7 +15,7 @@ export function calcOrderTotal(cart, itemList) {
     let orderTotal = 0;
     for (let item of cart) {
         const book = findById(item.id, itemList);
-        orderTotal = orderTotal + book.price * item.qty; 
+        orderTotal = orderTotal + (book.price * item.qty); 
     }
 
     return orderTotal;
@@ -27,9 +27,14 @@ export function toUSD(number) {
 
 // create getCart() function
 export function getCart() {
-
+    const cartString = localStorage.getItem('CART') || '[]'; 
+    console.log(cartString);
+    const cart = JSON.parse(cartString); 
+    return cart;
 }
 
 // create addItem(id) function
+
+export function 
 
 // create clearCart() function 
