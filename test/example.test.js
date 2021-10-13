@@ -1,8 +1,7 @@
 // IMPORT MODULES under test here:
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-import { findById, getCart } from '../utils.js';
-import { calcOrderTotal } from '../utils.js';
+import { calcOrderTotal, findById, getCart, addItem } from '../utils.js';
 import { cart } from '../data/cart-data.js';    
 import { renderLineItem } from '../render-line-item.js';
 
@@ -89,10 +88,34 @@ test('getCart should return an empty array if cart doesn not exist', (expect) =>
 // TEST 6: ADDITEM(ID) - when item exists in cart
 test('addItem() should increment qty when item exists in cart', (expect) => {
     //arrange
+    const expected = [
+        { id: '1', qty: 1 },
+        { id: '2', qty: 2 },
+    ]; 
+    localStorage.setItem('CART', JSON.stringify(expected)); 
 
     //act
+    addItem('1'); 
+    const cart = getCart(); 
+    const actual = [
+        { id: '1', qty: 2 },
+        { id: '2', qty: 2 },
+    ]; 
 
     //assert
-})
+    expect.deepEqual(cart, actual); 
+}); 
 
-// TEST 7L ADDITEM(ID) - when item doesn't exist in cart
+// TEST 7: ADDITEM(ID) - when item doesn't exist in cart
+test('addItem() should add 1 to qty when item does not already exist in cart', (expect) => {
+    //arrange
+    localStorage.removeItem('CART'); 
+    const expected = [{ id: '1', qty: 1 }]; 
+
+    //act
+    addItem('1'); 
+    const cart = getCart(); 
+
+    //asert
+    expect.deepEqual(cart, expected); 
+}); 

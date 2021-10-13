@@ -28,13 +28,23 @@ export function toUSD(number) {
 // create getCart() function
 export function getCart() {
     const cartString = localStorage.getItem('CART') || '[]'; 
-    console.log(cartString);
     const cart = JSON.parse(cartString); 
     return cart;
 }
 
 // create addItem(id) function
 
-export function 
+export function addItem(id) {
+    const cart = getCart(); 
+    const cartItem = findById(id, cart); 
+    if (cartItem) {
+        cartItem.qty++;
+    } else {
+        const newItem = { id: id, qty: 1 }; 
+        cart.push(newItem); 
+    }
+    const addString = JSON.stringify(cart); 
+    localStorage.setItem('CART', addString); 
+}
 
 // create clearCart() function 
