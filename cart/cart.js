@@ -15,9 +15,11 @@
 // </tr>
 
 import { cookbooks } from '../data/cookbooks.js'; 
-import { cart } from '../data/cart-data.js'; 
+// import { cart } from '../data/cart-data.js'; 
 import { renderLineItem } from '../render-line-item.js'; 
-import { calcOrderTotal, findById, toUSD } from '../utils.js'; 
+import { calcOrderTotal, findById, toUSD, getCart, addItem } from '../utils.js'; 
+
+const cart = getCart(); 
 
 // grab elements from HTML
 const tbody = document.getElementById('table-body'); 

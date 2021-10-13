@@ -93,7 +93,7 @@ test('addItem() should increment qty when item exists in cart', (expect) => {
         { id: '2', qty: 2 },
     ]; 
     localStorage.setItem('CART', JSON.stringify(expected)); 
-
+ 
     //act
     addItem('1'); 
     const cart = getCart(); 
