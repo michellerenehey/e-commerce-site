@@ -1,17 +1,18 @@
 # Alchemy Bootstrap Template
 
-## Making a plan
+### Making a plan
 
-### HTML
+### DAY 1
+## HTML
 * h1: welcome
 * h2: little description
 * div: empty, with id="product-list"
-### CSS
+## CSS
 * center the page
 * put the images in a flexbox, and have them wrap
-### IMAGES
+## IMAGES
 * add images into assets folder to use in list
-### DATA MODEL (cookbooks.js)
+## DATA MODEL (cookbooks.js)
 * create an ARRAY, and inside of that array, build objects
 * what do I want people to know about my products? 
 * cookbooks! here is what is important to me: 
@@ -21,7 +22,7 @@
     * publisher
     <!-- * type of cuisine -->
     * price 
-### APP.JS
+## APP.JS
 * here we will want to grab the dom elements that exist that we'll need: just the empty div
 * build out the initial for-loop here (we'll move it later, but it might help to understand how it works!)
 * we need to: 
@@ -31,16 +32,30 @@
     * update a p tag in the div to hold the publisher from our cookbooks list (p)
     * update a p tag in the div to hold the price from our cookbooks list (p)
 
-### CREATE FUNCTION (render-product.js)
+## CREATE FUNCTION (render-product.js)
 * now, instead of all of the DOM maniuplation happening in app.js, let's create it's own function to render all of the values from the list. we'll do that in a separate file, render-product.js.
 * function will take in one of the items in the product-list array
 * function will output the for-loop (dom manipulation), to create the html 
 * don't forget to export! then don't forget to import in app.js! 
 
+### DAY 2
+* whoops, no plan for day 2 
 
-## To Run Cypress Tests
-* `npm install`
-* `npm test`
-* Cypress will open -- you should then click "run <#> integration spec(s)"
-    ![](cypress.png)
-* Make sure all tests pass
+### DAY 3
+## FUNCTIONS
+* getcart()
+    * test this first
+        * first test when cart exists
+        * second test when cart doesn't exist
+    * then add to cart.js
+* addItem(id)
+    * test before building
+        * first test if an item already exists in cart
+        * second test if an item doesn't exist
+* clearCart() 
+
+## CONNECT FUNCTIONS TO PAGE 
+* cart.js needs to have getCart() added
+* cart.js needs to have clearItem() added (to button?)
+* app.js needs to have addItem(id) added
+* add appropriate buttons

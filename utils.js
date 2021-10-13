@@ -24,3 +24,12 @@ export function calcOrderTotal(cart, itemList) {
 export function toUSD(number) {
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' }); 
 }
+
+// create getCart() function
+export function getCart() {
+
+}
+
+// create addItem(id) function
+
+// create clearCart() function 
