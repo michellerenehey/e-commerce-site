@@ -40,7 +40,7 @@ export function addItem(id) {
     if (cartItem) {
         cartItem.qty++;
     } else {
-        const newItem = { id: id, qty: 1 }; 
+        const newItem = { id: id, qty: 1 }; // could add any key:value pair here
         cart.push(newItem); 
     }
     const addString = JSON.stringify(cart); 

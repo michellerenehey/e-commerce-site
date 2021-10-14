@@ -25,13 +25,15 @@ const addButtons = document.querySelectorAll('.add-button');
 
 // const cartHolder = getCart(); 
 
-for (let addBtn of addButtons) {
-    addBtn.addEventListener('click', () => {
-        addItem(addBtn.id); 
+for (let button of addButtons) {
+    button.addEventListener('click', () => {
+        addItem(button.id); 
         let cart = getCart(); 
-        let itemQty = findById(addBtn.id, cart).qty; 
-        const qtyAdded = document.getElementById(`qty${addBtn.id}`);
+        let itemQty = findById(button.id, cart).qty; 
+        const qtyAdded = document.getElementById(`qty${button.id}`); // button.id (element)
         qtyAdded.textContent = itemQty;
     }); 
 }
 
+// const array = [{1:2, 3:4, 5:6}, {7:8, 9:10, 11:12}]; 
+// console.log(`${array.1}`); 
