@@ -38,7 +38,7 @@ export function renderBook(book) {
     const qtyAdded = document.createElement('span'); 
     qtyAdded.classList.add('quantity-in-cart'); 
     qtyAdded.id = `qty${book.id}`; //book.itemNumber //we assigned book.id here as qty //concatinates qty+'1'
-    qtyAdded.textContent = '0'; 
+    qtyAdded.textContent = ''; 
 
     productCard.append(productHeader, productImg, authorName, publisherName, price, addButton, qtyAdded);   
     return productCard; 
