@@ -11,7 +11,7 @@ const test = QUnit.test;
 test('renderBook should return an HTML snippet', (expect) => {
   
     // grab outerHTML from first object 
-    const expected = '<div class="product-card"><h3>Baking with Fortitude</h3><img src="./assets/fortitude.jpeg"><p class="author">Author: Dee Rettali</p><p class="publisher">Publisher: Bloomsbury</p><p class="price">Price: $28</p><button class=\"add-button\" id=\"1\">Add to cart</button><p class=\"quantity-in-cart\">0</p></div>';
+    const expected = '<div class="product-card"><h3>Baking with Fortitude</h3><img src="./assets/fortitude.jpeg"><p class="author">Author: Dee Rettali</p><p class="publisher">Publisher: Bloomsbury</p><p class="price">Price: $28</p><button class="add-button" id="1">Add to cart</button><span class="quantity-in-cart" id="qty1">0</span></div>';
     
     // declare variable to grab first item from object
     const fortitude = cookbooks[0]; 
