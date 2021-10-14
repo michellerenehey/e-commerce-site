@@ -32,13 +32,13 @@ export function renderBook(book) {
 
     const addButton = document.createElement('button'); 
     addButton.classList.add('add-button'); 
-    addButton.id = book.id;
+    addButton.id = book.id; //note addButton.id is element.id=""/ book.id = itemNumber from array
     addButton.textContent = 'Add to cart'; 
 
     const qtyAdded = document.createElement('span'); 
     qtyAdded.classList.add('quantity-in-cart'); 
-    qtyAdded.id = `qty${book.id}`;
-    qtyAdded.textContent = '0'; 
+    qtyAdded.id = `qty${book.id}`; //book.itemNumber //we assigned book.id here as qty //concatinates qty+'1'
+    qtyAdded.textContent = ''; 
 
     productCard.append(productHeader, productImg, authorName, publisherName, price, addButton, qtyAdded);   
     return productCard; 
