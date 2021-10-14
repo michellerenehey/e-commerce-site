@@ -51,7 +51,7 @@ test('total should return the total of the items in the cart', (expect) => {
 // TEST 4: RENDERLINEITEM
 test('renderLineItem should return html snippet', (expect) => {
 
-    const expected = '<tr><td>Baking with Fortitude</td><td>28</td><td>1</td><td>$28.00</td></tr>';
+    const expected = '<tr><td>Baking with Fortitude</td><td>$28.00</td><td>1</td><td>$28.00</td></tr>';
     // const cart = getCart(); 
     // console.log(cart);
     const actual = renderLineItem(staticCart[0], findById(staticCart[0].id, cookbooks)).outerHTML; 
