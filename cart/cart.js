@@ -15,11 +15,11 @@
 // </tr>
 
 import { cookbooks } from '../data/cookbooks.js'; 
-import { cart } from '../data/cart-data.js'; 
 import { renderLineItem } from '../render-line-item.js'; 
-import { calcOrderTotal, findById, toUSD } from '../utils.js'; 
+import { calcOrderTotal, findById, toUSD, getCart, clearCart } from '../utils.js'; 
 
-// grab elements from HTML
+const cart = getCart(); 
+
 const tbody = document.getElementById('table-body'); 
 
 for (let cartItem of cart) {
@@ -32,3 +32,11 @@ for (let cartItem of cart) {
 const orderTotal = calcOrderTotal(cart, cookbooks); 
 const tdOrderTotal = document.getElementById('order-total'); 
 tdOrderTotal.textContent = toUSD(orderTotal); 
+
+const orderButton = document.getElementById('order-button'); 
+orderButton.addEventListener('click', () => {
+    alert('Are you sure? No refunds!');
+    clearCart(); 
+    window.location.replace('..'); 
+}); 
+

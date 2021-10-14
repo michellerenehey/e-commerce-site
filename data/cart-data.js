@@ -1,4 +1,7 @@
-export const cart = [
+// removed this data section bc we are now pulling this
+// in from localStorage
+
+const cart = [
     {
         id: '1', 
         qty: 1
@@ -8,3 +11,4 @@ export const cart = [
         qty: 2
     },
 ]; 
+export default cart; 
