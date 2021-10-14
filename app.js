@@ -1,7 +1,7 @@
 // import functions
 import { cookbooks } from './data/cookbooks.js'; 
 import { renderBook } from './render-book.js';
-import { addItem } from './utils.js'; 
+import { addItem, findById, getCart } from './utils.js'; 
 
 // grab important DOM elements
 const productList = document.getElementById('product-list'); 
@@ -23,8 +23,15 @@ for (let book of cookbooks) {
 
 const addButtons = document.querySelectorAll('.add-button'); 
 
+// const cartHolder = getCart(); 
+
 for (let addBtn of addButtons) {
     addBtn.addEventListener('click', () => {
         addItem(addBtn.id); 
+        let cart = getCart(); 
+        let itemQty = findById(addBtn.id, cart).qty; 
+        const qtyAdded = document.getElementById(`qty${addBtn.id}`);
+        qtyAdded.textContent = itemQty;
     }); 
 }
+

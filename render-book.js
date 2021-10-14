@@ -35,8 +35,9 @@ export function renderBook(book) {
     addButton.id = book.id;
     addButton.textContent = 'Add to cart'; 
 
-    const qtyAdded = document.createElement('p'); 
+    const qtyAdded = document.createElement('span'); 
     qtyAdded.classList.add('quantity-in-cart'); 
+    qtyAdded.id = `qty${book.id}`;
     qtyAdded.textContent = '0'; 
 
     productCard.append(productHeader, productImg, authorName, publisherName, price, addButton, qtyAdded);   
