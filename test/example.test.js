@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-import { calcOrderTotal, findById, getCart, addItem, clearCart } from '../utils.js';
+import { calcOrderTotal, findById, getCart, addItem, clearCart, getProducts } from '../utils.js';
 import staticCart from '../data/cart-data.js';    
 import { renderLineItem } from '../render-line-item.js';
 
@@ -138,3 +138,4 @@ test('clearCart() should clear the localStorage', (expect) => {
     //assert
     expect.deepEqual(cart, actual); 
 }); 
+
