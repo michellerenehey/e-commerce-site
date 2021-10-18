@@ -2,6 +2,20 @@ body {
     text-align: center;
 }
 
+#inputs-and-labels {
+    display: flex; 
+    flex-direction: column;
+}
+
+input {
+    margin: 5px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 25px;
+}
+
 button {
     background-color: #F7C9E5;
     border: 1px solid #0409a6;
