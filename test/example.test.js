@@ -140,9 +140,9 @@ test('clearCart() should clear the localStorage', (expect) => {
 }); 
 
 // Test 9: ADDPRODUCT() 
-test('addProdcut() should add a product to the products array', (expect) => {
+test('addProduct() should add a product to the products array', (expect) => {
     // arrange
-    let products = addProduct(); 
+    let products; 
     const newProduct = {
         id: '6', 
         name: 'Good Fish', 
