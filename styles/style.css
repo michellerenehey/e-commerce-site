@@ -82,7 +82,7 @@ h3 {
     transform: translateY(4px);
   }
 
-#cart-button{
+#cart-button, #admin-button {
     background-color: #0409a6;
     margin: 35px;
     padding: 10px;
