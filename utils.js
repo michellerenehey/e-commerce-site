@@ -58,14 +58,14 @@ export function clearCart() {
 
 import { cookbooks } from './data/cookbooks.js'; 
 
-export getProducts() {
+export function getProducts() {
     let lsProducts = localStorage.getItem('PRODUCTS'); 
     const products = JSON.parse(lsProducts); 
 
-    if(!products){
+    if (!products){
         const productString = JSON.stringify(cookbooks); 
         localStorage.setItem('PRODUCTS', productString); 
     }
 
-    return lsProducts || cookbooks; 
+    return products || cookbooks; 
 }
