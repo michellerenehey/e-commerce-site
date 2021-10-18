@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { cookbooks } from '../data/cookbooks.js';
 import { renderBook } from '../render-book.js';
-import { calcOrderTotal, findById, getCart, addItem, clearCart, getProducts } from '../utils.js';
+import { calcOrderTotal, findById, getCart, addItem, clearCart, getProducts, addProduct } from '../utils.js';
 import staticCart from '../data/cart-data.js';    
 import { renderLineItem } from '../render-line-item.js';
 
@@ -139,3 +139,23 @@ test('clearCart() should clear the localStorage', (expect) => {
     expect.deepEqual(cart, actual); 
 }); 
 
+// Test 9: ADDPRODUCT() 
+test('addProdcut() should add a product to the products array', (expect) => {
+    // arrange
+    let products = addProduct(); 
+    const newProduct = {
+        id: '6', 
+        name: 'Good Fish', 
+        img: './good-fish.jpeg',
+        author: 'Becky Selengut', 
+        publisher: 'Sasquatch', 
+        price: 29.95, 
+    }; 
+
+    // act
+    addProduct(newProduct); 
+
+    // assert 
+    products = getProducts(); 
+    expect.equal(products.length, 6); 
+}); 

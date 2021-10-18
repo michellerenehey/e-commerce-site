@@ -2,13 +2,22 @@ body {
     text-align: center;
 }
 
-#inputs-and-labels {
+#product-form {
     display: flex; 
     flex-direction: column;
+    align-items: center;
 }
 
 input {
     margin: 5px;
+}
+
+#book-button {
+    color: #0409a6;
+} 
+
+#book-button:hover {
+    cursor: pointer;
 }
 
 h1 {

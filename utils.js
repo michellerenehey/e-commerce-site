@@ -69,3 +69,9 @@ export function getProducts() {
 
     return products || cookbooks; 
 }
+
+// create addProduct() function 
+
+export function addProduct() {
+    
+}
