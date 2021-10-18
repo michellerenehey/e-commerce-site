@@ -2,6 +2,7 @@ import { addProduct } from '../utils.js';
 
 const productForm = document.getElementById('product-form'); 
 
+
 productForm.addEventListener('submit', (e) => {
     e.preventDefault(); 
     const data = new FormData(productForm); 
@@ -15,4 +16,5 @@ productForm.addEventListener('submit', (e) => {
     }; 
     addProduct(newProduct); 
     alert('New book added to the inventory!'); 
+    productForm.reset();
 });
