@@ -1,10 +1,11 @@
 // import functions
-import { cookbooks } from './data/cookbooks.js'; 
+// import { cookbooks } from './data/cookbooks.js'; 
 import { renderBook } from './render-book.js';
-import { addItem, findById, getCart } from './utils.js'; 
+import { addItem, findById, getCart, getProducts } from './utils.js'; 
 
 // grab important DOM elements
 const productList = document.getElementById('product-list'); 
+const cookbooks = getProducts(); 
 
 // model HTML skeleton: 
 // <div class="product-card">

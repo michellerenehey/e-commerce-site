@@ -3,6 +3,7 @@
 // if the item's ID is equal to the ID argument, return the item 
 // else, continue the loop
 
+
 export function findById(id, itemList){
     for (let item of itemList){
         if (item.id === id){
@@ -51,4 +52,29 @@ export function addItem(id) {
 
 export function clearCart() {
     localStorage.removeItem('CART'); 
+}
+
+// create getProducts() function
+
+import { cookbooks } from './data/cookbooks.js'; 
+
+export function getProducts() {
+    let lsProducts = localStorage.getItem('PRODUCTS'); 
+    const products = JSON.parse(lsProducts); 
+
+    if (!products){
+        const productString = JSON.stringify(cookbooks); 
+        localStorage.setItem('PRODUCTS', productString); 
+    }
+
+    return products || cookbooks; 
+}
+
+// create addProduct() function 
+
+export function addProduct(newProduct) {
+    let products = getProducts(); 
+    products.push(newProduct); 
+    let productString = JSON.stringify(products); 
+    localStorage.setItem('PRODUCTS', productString); 
 }

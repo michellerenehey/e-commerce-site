@@ -14,11 +14,12 @@
 //     <td>28.00</td>
 // </tr>
 
-import { cookbooks } from '../data/cookbooks.js'; 
+// import { cookbooks } from '../data/cookbooks.js'; 
 import { renderLineItem } from '../render-line-item.js'; 
-import { calcOrderTotal, findById, toUSD, getCart, clearCart } from '../utils.js'; 
+import { calcOrderTotal, findById, toUSD, getCart, clearCart, getProducts } from '../utils.js'; 
 
 const cart = getCart(); 
+const cookbooks = getProducts();
 
 const tbody = document.getElementById('table-body'); 
 
